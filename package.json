@@ -1,8 +1,8 @@
 {
-  "name": "@we5/homebridge-philipsair-platform",
-  "version": "2.0.0-beta.1",
-  "description": "Homebridge plugin for philips air purifier and humidifier.",
-  "author": "we5 (https://github.com/we5/homebridge-philipsair-platform)",
+  "name": "@jmasarweh/homebridge-philipsair-2024",
+  "version": "1.0.0-beta.1",
+  "description": "Homebridge plugin for philips air purifier and humidifier series 300 and 800.",
+  "author": "jmasarweh (https://github.com/jmasarweh/homebridge-philipsair-2024)",
   "scripts": {
     "lint": "eslint --fix .",
     "watch": "npm run build && npm link && nodemon",
@@ -27,19 +27,13 @@
     "rimraf": "^3.0.2"
   },
   "bugs": {
-    "url": "https://github.com/we5/homebridge-philipsair-platform/issues"
+    "url": "https://github.com/jmasarweh/homebridge-philipsair-2024/issues"
   },
   "engines": {
     "node": ">=14.18.0",
     "homebridge": "^1.5.0"
   },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/we5"
-    }
-  ],
-  "homepage": "https://github.com/we5/homebridge-philipsair-platform#readme",
+  "homepage": "https://github.com/jmasarweh/homebridge-philipsair-2024#readme",
   "keywords": [
     "philips",
     "homebridge-plugin",
@@ -53,6 +47,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/we5/homebridge-philipsair-platform.git"
+    "url": "git+https://github.com/jmasarweh/homebridge-philipsair-2024.git"
   }
 }
