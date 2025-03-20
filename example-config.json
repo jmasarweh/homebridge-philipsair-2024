@@ -5,12 +5,14 @@
     "port": 51609,
     "pin": "983-44-986"
   },
-  "plugins": ["homebridge-philipsair-platform"],
+  "plugins": [
+    "homebridge-philipsair-2024"
+  ],
   "accessories": [],
   "platforms": [
     {
-      "platform": "PhilipsAirPlatform",
-      "name": "PhilipsAirPlatform",
+      "platform": "PhilipsAirPlatform2024",
+      "name": "PhilipsAirPlatform2024",
       "debug": false,
       "warn": true,
       "error": true,
