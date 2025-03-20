@@ -14,10 +14,10 @@ var Accessory;
 
 module.exports = (homebridge) => {
   Accessory = homebridge.platformAccessory;
-  return PhilipsAirPlatform;
+  return PhilipsAirPlatform2024;
 };
 
-function PhilipsAirPlatform(log, config, api) {
+function PhilipsAirPlatform2024(log, config, api) {
   if (!api || !config) {
     return;
   }
@@ -32,7 +32,7 @@ function PhilipsAirPlatform(log, config, api) {
   this.api.on('didFinishLaunching', this.didFinishLaunching.bind(this));
 }
 
-PhilipsAirPlatform.prototype = {
+PhilipsAirPlatform2024.prototype = {
   didFinishLaunching: async function () {
     //initialize devices
     AccessoriesSetup(this.devices, this.config.devices);
