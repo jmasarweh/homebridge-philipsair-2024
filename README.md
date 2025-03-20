@@ -21,11 +21,16 @@ This is a fork  of the Philips Air Purifier plugin from SeydX with an attempt to
 
 This plugin supports following functions:
 
+For  AC3036 and AC1715 models:
 - Air Purifier
-- Humidifier
+- Humidifier (if equiped)
 - Device Lights
-- Temperature Sensor
-- Humidity Sensor
+- Temperature Sensor (if equiped)
+- Humidity Sensor (if equiped)
+
+For  AC0820 and AC0850 models:
+- Air Purifier
+- Device Lights
 
 ## Installation
 
