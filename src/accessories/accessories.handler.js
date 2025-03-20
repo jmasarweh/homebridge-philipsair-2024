@@ -3,7 +3,7 @@
 const path = require('path');
 const { exec, spawn } = require('child_process');
 
-const logger = require('../utils/logger');
+const logger = require('../utils/logger').default;
 
 class Handler {
   constructor(api, accessory) {

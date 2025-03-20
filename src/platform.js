@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = require('./utils/logger');
+const logger = require('./utils/logger').default;
 const { version } = require('../package.json');
 const { generateConfig } = require('./utils/utils');
 

@@ -6,7 +6,7 @@
  *
  **/
 
-module.exports = (homebridge) => {
+export default (homebridge) => {
   const PhilipsAirPlatform2024 = require('./src/platform')(homebridge);
   homebridge.registerPlatform('homebridge-philipsair-2024', 'PhilipsAirPlatform2024', PhilipsAirPlatform2024, true);
 };

@@ -1,6 +1,6 @@
 'use-strict';
 
-const logger = require('../utils/logger');
+const logger = require('../utils/logger').default;
 const { UUIDgenerate } = require('../utils/utils');
 const Config = require('./accessories.config');
 

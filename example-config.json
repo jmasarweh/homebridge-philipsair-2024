@@ -12,7 +12,7 @@
   "platforms": [
     {
       "platform": "PhilipsAirPlatform2024",
-      "name": "PhilipsAirPlatform2024",
+      "name": "Philips Air Platform2 024",
       "debug": false,
       "warn": true,
       "error": true,
