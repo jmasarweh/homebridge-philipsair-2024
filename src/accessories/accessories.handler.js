@@ -49,8 +49,6 @@ class Handler {
         fltsts2: 'D05-15',
       };
 
-
-
       this.valueMaps = {
         pwr: {
           OFF: 0,
@@ -59,7 +57,6 @@ class Handler {
           1: 'ON',
         },
       };
-
     }
 
     if (this.accessory.context.config.model == 'AC0820' || this.accessory.context.config.model == 'AC0850') {
@@ -72,20 +69,19 @@ class Handler {
       this.valueMaps = {
         pwr: {
           OFF: 0,
-                ON: 1,
-                0: 'OFF',
-                1: 'ON',
-              },
+          ON: 1,
+          0: 'OFF',
+          1: 'ON',
+        },
         mode: {
           Sleep: 0,
           Turbo: 1,
           'Auto General': 2,
           0: 'Sleep',
           1: 'Turbo',
-          2: 'Auto General'
+          2: 'Auto General',
         },
       };
-
     }
 
     this.args = [

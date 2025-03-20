@@ -19,6 +19,6 @@ module.exports = {
     'no-multiple-empty-lines': ['warn', { max: 1, maxEOF: 0 }],
     'eol-last': ['error', 'always'],
     'space-before-function-paren': ['error', { named: 'never' }],
-    'prettier/prettier': ['error',{endOfLine:'off'}],
+    'prettier/prettier': ['error'],
   },
 };
