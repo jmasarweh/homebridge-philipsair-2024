@@ -2,7 +2,7 @@
     <img src="https://github.com/SeydX/homebridge-philipsair-platform/blob/master/images/logo.png" height="200">
 </p>
 
-# homebridge-philipsair-platform
+# homebridge-philipsair-2024
 
 [![npm](https://img.shields.io/npm/v/homebridge-philipsair-platform.svg?style=flat-square)](https://www.npmjs.com/package/homebridge-philipsair-platform)
 [![npm](https://img.shields.io/npm/dt/homebridge-philipsair-platform.svg?style=flat-square)](https://www.npmjs.com/package/homebridge-philipsair-platform)
@@ -11,22 +11,26 @@
 [![Discord](https://img.shields.io/discord/432663330281226270?color=728ED5&logo=discord&label=discord)](https://discord.gg/kqNCe2D)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg?style=flat-square&maxAge=2592000)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NP4T3KASWQLD8)
 
-**Creating and maintaining Homebridge plugins consume a lot of time and effort, if you would like to share your appreciation, feel free to "Star" or donate.**
-
-[Click here](https://github.com/SeydX) to review more of my plugins.
+All credit to SeydX and the people he credits back in his plugins.
+[Click here](https://github.com/SeydX) to review more of his plugins.
 
 
 ## Info
 
-This is a plugin for Philips Air Purifier/Humidifier.
+This is a fork  of the Philips Air Purifier plugin from SeydX with an attempt to support some models of the Philips Air purifier family, i.e AC0820 and 50.
 
 This plugin supports following functions:
 
+For  AC3036 and AC1715 models:
 - Air Purifier
-- Humidifier
+- Humidifier (if equiped)
 - Device Lights
-- Temperature Sensor
-- Humidity Sensor
+- Temperature Sensor (if equiped)
+- Humidity Sensor (if equiped)
+
+For  AC0820 and AC0850 models:
+- Air Purifier
+- Device Lights
 
 ## Installation
 
@@ -87,8 +91,8 @@ sudo pip3 install -U git+https://github.com/Peter-J/aioairctrl
 
 | Fields           | Description                                                  | Default                | Required |
 |------------------|--------------------------------------------------------------|------------------------|----------|
-| **platform**     | Must always be `PhilipsAirPlatform`.                         | `"PhilipsAirPlatform"` | Yes      |
-| name             | For logging purposes.                                        | `"PhilipsAirPlatform"` | No       |
+| **platform**     | Must always be `PhilipsAirPlatform2024`.                     | `"PhilipsAirPlatform2024"` | Yes  |
+| name             | For logging purposes.                                        | `"PhilipsAirPlatform2024"` | No   |
 | debug            | Enables additional output (debug) in the log.                | `false`                | No       |
 | warn             | Enables additional output (warn) in the log.                 | `true`                 | No       |
 | error            | Enables additional output (error) in the log.                | `true`                 | No       |
@@ -120,6 +124,8 @@ The following devices have been tested with this plugin and confirm that they wo
 
 - AC3036
 - AC1715
+- AC0820 (Hopefully)
+- AC0850 (Hopefully)
 
 Not yet confirmed with new configuration approach:
 
