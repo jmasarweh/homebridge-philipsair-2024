@@ -1,6 +1,7 @@
 {
   "name": "@jmasarweh/homebridge-philipsair-2024",
   "displayName": "Philips Air 2024",
+  "type": "module",
   "version": "1.0.0-beta.1",
   "description": "Homebridge plugin for philips air purifier and humidifier series 300 and 800.",
   "author": "jmasarweh (https://github.com/jmasarweh/homebridge-philipsair-2024)",
