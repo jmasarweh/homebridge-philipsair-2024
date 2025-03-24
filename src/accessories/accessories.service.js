@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = require('../utils/logger').default;
+import logger from '../utils/logger';
 
 class Accessory {
   constructor(api, accessory, handler) {
@@ -31,7 +31,7 @@ class Accessory {
       this.purifierService = this.accessory.addService(
         this.api.hap.Service.AirPurifier,
         this.accessory.displayName,
-        'purifier'
+        'purifier',
       );
     }
 
@@ -71,7 +71,7 @@ class Accessory {
       this.airQualityService = this.accessory.addService(
         this.api.hap.Service.AirQualitySensor,
         'Air Quality',
-        'Air Quality'
+        'Air Quality',
       );
     }
 
@@ -102,7 +102,7 @@ class Accessory {
         this.humidifierService = this.accessory.addService(
           this.api.hap.Service.HumidifierDehumidifier,
           'Humidifier',
-          'Humidifier'
+          'Humidifier',
         );
       }
 
@@ -166,7 +166,7 @@ class Accessory {
         this.temperatureService = this.accessory.addService(
           this.api.hap.Service.TemperatureSensor,
           'Temperature Sensor',
-          'Temperature Sensor'
+          'Temperature Sensor',
         );
       }
     } else {
@@ -184,7 +184,7 @@ class Accessory {
         this.humidityService = this.accessory.addService(
           this.api.hap.Service.HumiditySensor,
           'Humidity Sensor',
-          'Humidity Sensor'
+          'Humidity Sensor',
         );
       }
     } else {
@@ -229,4 +229,4 @@ class Accessory {
   }
 }
 
-module.exports = Accessory;
+export default Accessory;

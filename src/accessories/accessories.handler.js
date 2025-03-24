@@ -1,9 +1,9 @@
 'use strict';
 
-const path = require('path');
-const { exec, spawn } = require('child_process');
+import { resolve as _resolve } from 'path';
+import { exec, spawn } from 'child_process';
 
-const logger = require('../utils/logger').default;
+import logger from '../utils/logger';
 
 class Handler {
   constructor(api, accessory) {
@@ -86,7 +86,7 @@ class Handler {
 
     this.args = [
       'python3',
-      `${path.resolve(__dirname, '../../')}/lib/pyaircontrol.py`,
+      `${_resolve(__dirname, '../../')}/lib/pyaircontrol.py`,
       '-H',
       this.accessory.context.config.host,
       '-P',
@@ -496,7 +496,7 @@ class Handler {
         this.humidifierService
           .updateCharacteristic(
             this.api.hap.Characteristic.Active,
-            parseInt(this.obj.pwr) ? (this.obj.func === 'PH' ? 1 : 0) : 0
+            parseInt(this.obj.pwr) ? (this.obj.func === 'PH' ? 1 : 0) : 0,
           )
           .updateCharacteristic(this.api.hap.Characteristic.CurrentRelativeHumidity, this.obj.rh)
           .updateCharacteristic(this.api.hap.Characteristic.WaterLevel, water_level)
@@ -562,7 +562,7 @@ class Handler {
     this.airControl.stderr.on('exit', () => {
       logger.debug(
         `airControl process killed (${this.shutdown ? 'expected' : 'not expected'})`,
-        this.accessory.displayName
+        this.accessory.displayName,
       );
 
       clearTimeout(this.processTimeout);
@@ -572,14 +572,17 @@ class Handler {
       }
     });
 
-    this.processTimeout = setTimeout(() => {
-      if (this.airControl) {
-        this.airControl.kill();
-        this.airControl = null;
-      }
+    this.processTimeout = setTimeout(
+      () => {
+        if (this.airControl) {
+          this.airControl.kill();
+          this.airControl = null;
+        }
 
-      this.longPoll();
-    }, 1 * 60 * 1000);
+        this.longPoll();
+      },
+      1 * 60 * 1000,
+    );
   }
 
   kill(shutdown) {
@@ -592,4 +595,4 @@ class Handler {
   }
 }
 
-module.exports = Handler;
+export default Handler;

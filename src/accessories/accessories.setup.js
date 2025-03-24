@@ -2,7 +2,7 @@
 
 const logger = require('../utils/logger').default;
 const { UUIDgenerate } = require('../utils/utils');
-const Config = require('./accessories.config');
+const Config = require('./accessories.config').default;
 
 const Setup = async (deviceMap, devices) => {
   for (const deviceConfig of devices) {

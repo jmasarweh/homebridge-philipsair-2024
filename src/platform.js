@@ -113,7 +113,7 @@ PhilipsAirPlatform2024.prototype = {
     this.api.unregisterPlatformAccessories(PLUGIN_NAME, PLATFORM_NAME, [accessory]);
 
     this.accessories = this.accessories.filter(
-      (cachedAccessory) => cachedAccessory.displayName !== accessory.displayName
+      (cachedAccessory) => cachedAccessory.displayName !== accessory.displayName,
     );
   },
 };
