@@ -1,6 +1,6 @@
 'use strict';
 
-import logger from '../utils/logger';
+const logger = require('../utils/logger').default;
 
 class Accessory {
   constructor(api, accessory, handler) {
@@ -229,4 +229,4 @@ class Accessory {
   }
 }
 
-export default Accessory;
+module.exports = Accessory;

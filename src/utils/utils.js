@@ -4,7 +4,7 @@ const crypto = require('crypto');
 
 exports.generateConfig = (config) => {
   return {
-    name: config.name || 'PhilipsAirPlatform',
+    name: config.name || 'PhilipsAirPlatform2024',
     debug: config.debug || false,
     warn: config.warn !== false,
     error: config.error !== false,

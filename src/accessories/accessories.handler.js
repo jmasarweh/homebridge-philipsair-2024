@@ -1,9 +1,9 @@
 'use strict';
 
-import { resolve as _resolve } from 'path';
-import { exec, spawn } from 'child_process';
+const path = require('path');
+const { exec, spawn } = require('child_process');
 
-import logger from '../utils/logger';
+const logger = require('../utils/logger').default;
 
 class Handler {
   constructor(api, accessory) {
@@ -86,7 +86,7 @@ class Handler {
 
     this.args = [
       'python3',
-      `${_resolve(__dirname, '../../')}/lib/pyaircontrol.py`,
+      `${path.resolve(__dirname, '../../')}/lib/pyaircontrol.py`,
       '-H',
       this.accessory.context.config.host,
       '-P',
@@ -595,4 +595,4 @@ class Handler {
   }
 }
 
-export default Handler;
+module.exports = Handler;

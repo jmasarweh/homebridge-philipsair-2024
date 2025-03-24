@@ -1,6 +1,6 @@
 'use strict';
 
-import { validIP } from '../utils/utils';
+const { validIP } = require('../utils/utils');
 
 const Config = (deviceConfig) => {
   return {
@@ -20,4 +20,4 @@ const Config = (deviceConfig) => {
   };
 };
 
-export default Config;
+module.exports = Config;
